@@ -5,7 +5,7 @@ function loadGame(gameName) {
   // Create a div for the canvas
   const canvasContainer = document.createElement("div");
   canvasContainer.id = "canvas-container";
-  canvasContainer.className = "canvas-container"; // Add a class for styling
+  canvasContainer.className = "canvas-container";
 
   // Append the canvas container to the "game-container"
   gameContainer.appendChild(canvasContainer);
@@ -36,7 +36,6 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// Add this code to handle routing
 function handleRouting() {
   const path = window.location.pathname;
 
@@ -80,5 +79,4 @@ function applyUserPreference() {
   darkModeToggle.checked = body.classList.contains("dark-mode");
 }
 
-// Add an event listener to apply the user's preference on page load
 window.addEventListener("load", applyUserPreference);
