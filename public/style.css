@@ -1,19 +1,23 @@
+/* Light Mode Styles */
 .body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 22px;
   background-color: #f0f0f0;
 }
 
 .navbar {
   background-color: #007bff;
+  letter-spacing: .20em;
 }
 
-.navbar-brand, .navbar-nav .nav-link {
-  color: #ffffff; 
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff;
 }
 
 .navbar-toggler-icon {
-  background-color: #ffffff; 
+  background-color: #ffffff;
 }
 
 .game-container {
@@ -29,3 +33,129 @@
   align-items: center;
   height: 100%;
 }
+
+.subtitle-container {
+  background-color: #eef2ef;
+  text-align: left;
+  padding: 10px;
+}
+
+.subtitle {
+  color: #000000;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+
+.footer {
+  background-color: #eef2ef;
+  color: #ffffff;
+  text-align: right;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .navbar {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+body.dark-mode .subtitle-container {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .subtitle {
+  color: #ffffff;
+}
+
+body.dark-mode .footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.subtitle-container {
+  border: 2px solid orange;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.subtitle {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 22px;
+}
+
+.custom-card-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+body.dark-mode .custom-card-img {
+  filter: brightness(0.8); 
+}
+
+body.dark-mode .card {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+body.dark-mode .card-title {
+  color: #ffffff;
+}
+
+body.dark-mode .card-text {
+  color: #ffffff;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+

@@ -1,4 +1,3 @@
-// Update loadGame function
 function loadGame(gameName) {
   const gameContainer = document.getElementById("game-container");
   gameContainer.innerHTML = "";
@@ -36,3 +35,50 @@ function loadGame(gameName) {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+// Add this code to handle routing
+function handleRouting() {
+  const path = window.location.pathname;
+
+  if (path === "/puzzle") {
+    loadGame("puzzle");
+  } else if (path === "/minesweeper") {
+    loadGame("minesweeper");
+  } else if (path === "/spaceship") {
+    loadGame("spaceship");
+  }
+}
+
+// Call handleRouting when the page loads
+window.addEventListener("load", handleRouting);
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+
+  // Check if dark mode is enabled and store the preference
+  const darkModeEnabled = body.classList.contains("dark-mode");
+  localStorage.setItem("darkModeEnabled", darkModeEnabled);
+}
+
+function applyUserPreference() {
+  const savedDarkMode = localStorage.getItem("darkModeEnabled");
+  const body = document.body;
+
+  if (savedDarkMode && savedDarkMode === "true") {
+    body.classList.add("dark-mode");
+  } else {
+    body.classList.remove("dark-mode");
+  }
+
+  // Update the state of the toggle button
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  darkModeToggle.checked = body.classList.contains("dark-mode");
+}
+
+// Add an event listener to apply the user's preference on page load
+window.addEventListener("load", applyUserPreference);

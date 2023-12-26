@@ -123,7 +123,7 @@ if (typeof SpaceshipGame === "undefined") {
     }
 
     keyPressed() {
-      if (!this.stillRunning && key === "N") {
+      if (!this.stillRunning && (key === "N" || key === "n")) {
         this.stillRunning = true;
         this.gameWon = false;
         this.numOfMines = this.numOfMines + 3;
