@@ -5,6 +5,9 @@
 ## Live Demo
 
 Check out the live demo <a href="https://mini-flix.onrender.com/" target="_blank">here</a>.
+```
+Initial load may take a few minutes because of the use of free tier service.
+```
 
 ## Games
 
