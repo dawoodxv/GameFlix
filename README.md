@@ -44,8 +44,8 @@ To run the project locally, follow these steps:
 
 ## Technologies Used
 
-- **Frontend:** HTML, CSS, JavaScript, p5.js, Bootstrap
-- **Backend:** Node.js, Express
+-  HTML, CSS, JavaScript, p5.js, Bootstrap
+- Node.js, Express
 
 ## How to Play
 
